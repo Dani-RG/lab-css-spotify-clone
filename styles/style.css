@@ -6,23 +6,19 @@ Green: #00B172
 White: #FFF
 
 */
-/*
-@media (min-width: 412px) {
-    .responsive-div {
-      background-color: blue;
-    }
-  }
-  */
 body {
     font-family: Calibri, 'Trebuchet MS', sans-serif; 'Gill Sans', 'Gill Sans MT';
     font-size: 10px;
     color: 1A1A1A;
 }
 /*-------------HEADER-------------*/
-.header-image {
+.header-part {
     background-image: url("../images/landing.jpg");
+    /*background-position: 0 0;*/
     background-size: cover;
-    height: 1500px;
+    /*background-repeat: no-repeat;*/
+    height: 100vw;
+    /*position: relative;*/
 }
 #spotify-bar {
     width: 100vw;
@@ -39,16 +35,16 @@ body {
     position: relative;
 }
 #spotify-bar ul {
-    width: 30%;
-    margin: 2%;
+    width: 40vw;
+    margin: 2vw;
     display: flex;
     justify-content: space-evenly;
     position: relative;
 }
-#nav-bar a {
+#nav-links a {
     text-decoration: none;
     color: black;
-    font-size: 3em;
+    font-size: 2vw;
     position: relative;
     font-weight: lighter;
 }
@@ -64,13 +60,13 @@ body {
 
 #landing-page h1 {
     color: white;
+    font-size: 12em;
     margin-top: 40%;
     margin-bottom: 5%;
-    font-size: 12em;
 }
 #landing-page p {
     color: white;
-    font-size: 50px;
+    font-size: 4.5em;
     font-weight: lighter;
     position: relative;
 }
@@ -111,6 +107,7 @@ body {
     width: 100%;
 }
 #box-container p {
+    margin: 0 auto; /*centering block-level horizontally*/
     font-size: 3em;
     font-weight: lighter;
     width: 16vw;
@@ -150,11 +147,40 @@ body {
     font-weight: lighter;
     margin: 10% 0;
 }
-.section-green #spotify-logo-white {
+#spotify-white-logo {
 width: 8vw;
 position: absolute;
 }
-.section-green #profile {
+#profile {
     height: 70vh;
     margin-right: 3%;
+}
+/*-------------MEDIA QUERIES-------------*/
+@media (max-width: 640px) {
+    #landing-page {
+        font-size: 0.8vw;
     }
+    .section-white {
+        font-size: 1vw;
+    }
+    .section-green {
+        font-size: 1vw;
+        display: flex;
+        justify-content: space-around;
+    }
+    #last-text {
+        width: 33%;
+        margin-left: 2%;
+    }
+    #last-text > div {
+        width: 100%;
+    }
+    #spotify-white-logo {
+        
+    }
+    #profile {
+        height: 30vh;
+        margin-right: 2%;
+        margin-left: 10%;   
+    }
+}
